@@ -12,7 +12,6 @@ export const cartSlice = createSlice({
       state.cart = [...state.cart, { ...action.payload }];
     },
     updateCartItem: (state, action) => {
-      console.log("in if payload", action.payload);
       const { itemId, actionType } = action.payload;
       state.cart = state.cart.map((item) => {
         if (item.id === itemId) {
